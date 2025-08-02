@@ -1,0 +1,4 @@
+<Solution>
+    <Project Path="fsrubik.dev/fsrubik.dev.fsproj" />
+    <Project Path="fsrubik/fsrubik.fsproj" />
+</Solution>

@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>fsrubik</AssemblyName>
+        <RootNamespace>Reallukee.FsRubik</RootNamespace>
+
+        <ApplicationIcon>..\assets\fsrubik.ico</ApplicationIcon>
+
+        <FSharpPreferNetFrameworkTools>False</FSharpPreferNetFrameworkTools>
+        <FSharpPrefer64BitTools>True</FSharpPrefer64BitTools>
+
+        <NoWarn>0026</NoWarn>
+
+        <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+        <PackageId>Reallukee.FsRubik</PackageId>
+        <Title>FsRubik</Title>
+        <Version>1.0.0</Version>
+        <Authors>Luca Pollicino</Authors>
+        <Company>Luca Pollicino</Company>
+        <Product>FsRubik</Product>
+        <Description>FsRubik</Description>
+        <Copyright>Luca Pollicino</Copyright>
+        <PackageProjectUrl>https://github.com/reallukee/fsrubik</PackageProjectUrl>
+        <PackageIcon>fsrubik.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/reallukee/fsrubik</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>fsharp;rubik;library</PackageTags>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="src\Color.fsi" />
+        <Compile Include="src\Color.fs" />
+        <Compile Include="src\Face.fsi" />
+        <Compile Include="src\Face.fs" />
+        <Compile Include="src\Side.fsi" />
+        <Compile Include="src\Side.fs" />
+        <Compile Include="src\Cube.fsi" />
+        <Compile Include="src\Cube.fs" />
+        <Compile Include="src\Move.fsi" />
+        <Compile Include="src\Move.fs" />
+        <Compile Include="src\History.fsi" />
+        <Compile Include="src\History.fs" />
+        <Compile Include="src\Render.fsi" />
+        <Compile Include="src\Render.fs" />
+        <Compile Include="src\Loop.fsi" />
+        <Compile Include="src\Loop.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\examples\cubeLoop.fsx">
+            <Link>examples\cubeLoop.fsx</Link>
+        </None>
+
+        <None Include="..\examples\advanceCubeLoop.fsx">
+            <Link>examples\advanceCubeLoop.fsx</Link>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\assets\fsrubik.ico">
+            <Link>resources\icon.ico</Link>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\assets\fsrubik.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <Link>resources\package\icon.ico</Link>
+        </None>
+
+        <None Include="..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <Link>resources\package\README.md</Link>
+        </None>
+
+        <None Include="..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <Link>resources\package\LICENSE</Link>
+        </None>
+    </ItemGroup>
+
+</Project>
