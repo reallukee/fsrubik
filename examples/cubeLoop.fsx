@@ -1,19 +1,17 @@
 (*
     F# Script
 
-    dotnet fsi cubeLoop.fsx
+    Type "dotnet fsi cubeLoop.fsx" to run!
+
+    Necessary for F# Interactive
+
+    dotnet build fsrubik --configuration Release
+    dotnet pack fsrubik --configuration Release
 *)
 
-// Necessary for F# Interactive
-// dotnet build fsrubik --configuration Release
+#r @"../fsrubik/bin/Release/netstandard2.0/fsrubik.dll"
 
-// #r @"../fsrubik/bin/Release/netstandard2.0/fsrubik.dll"
-
-// Necessary for F# Interactive
-// dotnet build fsrubik --configuration Release
-// dotnet pack fsrubik --configuration Release
-
-#r @"nuget: Reallukee.FsRubik, 1.0.0"
+// #r @"nuget: Reallukee.FsRubik, 1.0.0"
 
 open System
 
