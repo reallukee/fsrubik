@@ -7,6 +7,12 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "fsrubik", "fsrubik\fsrubik.
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "fsrubik.dev", "fsrubik.dev\fsrubik.dev.fsproj", "{14C07704-3A71-4712-A5ED-FFDDCFE1AD85}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sharp", "sharp", "{D76706A8-BABF-43BD-8350-8F6197DAB5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fsrubik.sharp.dev", "fsrubik.sharp.dev\fsrubik.sharp.dev.csproj", "{F9C22AC8-F0AD-49AA-9322-0F4CC5E59597}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "fsrubik.sharp", "fsrubik.sharp\fsrubik.sharp.fsproj", "{BEEAE671-12CE-470E-AD7C-A0BBE4A7503E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +27,20 @@ Global
 		{14C07704-3A71-4712-A5ED-FFDDCFE1AD85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14C07704-3A71-4712-A5ED-FFDDCFE1AD85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14C07704-3A71-4712-A5ED-FFDDCFE1AD85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9C22AC8-F0AD-49AA-9322-0F4CC5E59597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9C22AC8-F0AD-49AA-9322-0F4CC5E59597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9C22AC8-F0AD-49AA-9322-0F4CC5E59597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9C22AC8-F0AD-49AA-9322-0F4CC5E59597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEEAE671-12CE-470E-AD7C-A0BBE4A7503E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEEAE671-12CE-470E-AD7C-A0BBE4A7503E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEEAE671-12CE-470E-AD7C-A0BBE4A7503E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEEAE671-12CE-470E-AD7C-A0BBE4A7503E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F9C22AC8-F0AD-49AA-9322-0F4CC5E59597} = {D76706A8-BABF-43BD-8350-8F6197DAB5CE}
+		{BEEAE671-12CE-470E-AD7C-A0BBE4A7503E} = {D76706A8-BABF-43BD-8350-8F6197DAB5CE}
 	EndGlobalSection
 EndGlobal

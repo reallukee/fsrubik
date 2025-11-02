@@ -1,4 +1,8 @@
 <Solution>
-    <Project Path="fsrubik.dev/fsrubik.dev.fsproj" />
-    <Project Path="fsrubik/fsrubik.fsproj" />
+  <Folder Name="/sharp/">
+    <Project Path="fsrubik.sharp.dev/fsrubik.sharp.dev.csproj" />
+    <Project Path="fsrubik.sharp/fsrubik.sharp.fsproj" />
+  </Folder>
+  <Project Path="fsrubik.dev/fsrubik.dev.fsproj" />
+  <Project Path="fsrubik/fsrubik.fsproj" />
 </Solution>

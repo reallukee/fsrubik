@@ -5,7 +5,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <!--<TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>-->
     <AssemblyName>fsrubik</AssemblyName>
-    <RootNamespace>Reallukee.FsRubik</RootNamespace>
+    <RootNamespace>Reallukee.FsRubik.Sharp</RootNamespace>
 
     <ApplicationIcon>..\assets\fsrubik.ico</ApplicationIcon>
 
@@ -17,12 +17,12 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
 
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <PackageId>Reallukee.FsRubik</PackageId>
-    <Title>FsRubik</Title>
+    <PackageId>Reallukee.FsRubik.Sharp</PackageId>
+    <Title>FsRubik.Sharp</Title>
     <Version>1.0.0</Version>
     <Authors>Luca Pollicino</Authors>
     <Company>Luca Pollicino</Company>
-    <Product>FsRubik</Product>
+    <Product>FsRubik#</Product>
     <Description>F#, paradigma funzionale e cubo di Rubik</Description>
     <Copyright>Luca Pollicino</Copyright>
     <PackageProjectUrl>https://github.com/reallukee/fsrubik</PackageProjectUrl>
@@ -36,32 +36,57 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="src\Color.fsi" />
-    <Compile Include="src\Color.fs" />
-    <Compile Include="src\Face.fsi" />
-    <Compile Include="src\Face.fs" />
-    <Compile Include="src\Side.fsi" />
-    <Compile Include="src\Side.fs" />
-    <Compile Include="src\Cube.fsi" />
-    <Compile Include="src\Cube.fs" />
-    <Compile Include="src\Move.fsi" />
-    <Compile Include="src\Move.fs" />
-    <Compile Include="src\History.fsi" />
-    <Compile Include="src\History.fs" />
-    <Compile Include="src\Render.fsi" />
-    <Compile Include="src\Render.fs" />
-    <Compile Include="src\Loop.fsi" />
-    <Compile Include="src\Loop.fs" />
+    <Compile Include="..\fsrubik\src\Color.fsi">
+      <Link>src\Color.fsi</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Color.fs">
+      <Link>src\Color.fs</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Face.fsi">
+      <Link>src\Face.fsi</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Face.fs">
+      <Link>src\Face.fs</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Side.fsi">
+      <Link>src\Side.fsi</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Side.fs">
+      <Link>src\Side.fs</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Cube.fsi">
+      <Link>src\Cube.fsi</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Cube.fs">
+      <Link>src\Cube.fs</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Move.fsi">
+      <Link>src\Move.fsi</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Move.fs">
+      <Link>src\Move.fs</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\History.fsi">
+      <Link>src\History.fsi</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\History.fs">
+      <Link>src\History.fs</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Render.fsi">
+      <Link>src\Render.fsi</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Render.fs">
+      <Link>src\Render.fs</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Loop.fsi">
+      <Link>src\Loop.fsi</Link>
+    </Compile>
+    <Compile Include="..\fsrubik\src\Loop.fs">
+      <Link>src\Loop.fs</Link>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\examples\cubeLoop.fsx">
-      <Link>examples\cubeLoop.fsx</Link>
-    </None>
-
-    <None Include="..\examples\advanceCubeLoop.fsx">
-      <Link>examples\advanceCubeLoop.fsx</Link>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
