@@ -1,23 +1,19 @@
-name: Build
+name: Publish
 
 on:
   push:
-    branches:
-      - "main"
-    paths:
-      - "**/*.fsi"
-      - "**/*.fs"
-      - "**/*.fsproj"
-      - "**/*.sln"
-      - "**/*.slnx"
-  workflow_dispatch:
+    tags:
+      - "v*.*.*"
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -36,5 +32,8 @@ jobs:
 
       - name: Pack projects
         run: |
-          dotnet pack fsrubik --no-build --configuration Release
-          dotnet pack fsrubik.sharp --no-build --configuration Release
+          dotnet pack fsrubik --no-build --configuration Release --output ./nupkg
+          dotnet pack fsrubik.sharp --no-build --configuration Release --output ./nupkg
+
+      - name: Publish packs
+        run: dotnet nuget push "nupkg/*.nupkg" --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key "${{ secrets.GITHUB_TOKEN }}"

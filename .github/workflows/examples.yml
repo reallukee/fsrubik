@@ -1,19 +1,17 @@
-name: Build
+name: Examples
 
 on:
   push:
     branches:
-      - "main"
+      - "**"
     paths:
       - "**/*.fsi"
       - "**/*.fs"
-      - "**/*.fsproj"
-      - "**/*.sln"
-      - "**/*.slnx"
+      - "**/*.fsx"
   workflow_dispatch:
 
 jobs:
-  build:
+  examples:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -38,3 +36,13 @@ jobs:
         run: |
           dotnet pack fsrubik --no-build --configuration Release
           dotnet pack fsrubik.sharp --no-build --configuration Release
+
+      - name: Run examples
+        run: |
+          for example in examples/*.fsx; do
+            if [[ -f "$example" ]]; then
+              dotnet fsi "$example"
+            fi
+          done
+        env:
+          CI: true
